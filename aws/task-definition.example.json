@@ -1,0 +1,32 @@
+{
+  "family": "refcard05-frontend",
+  "networkMode": "awsvpc",
+  "requiresCompatibilities": ["FARGATE"],
+  "cpu": "256",
+  "memory": "512",
+  "executionRoleArn": "arn:aws:iam::REPLACE_ACCOUNT_ID:role/LabRole",
+  "containerDefinitions": [
+    {
+      "name": "frontend",
+      "image": "REPLACE_ACCOUNT_ID.dkr.ecr.us-east-1.amazonaws.com/refcard05-frontend:latest",
+      "essential": true,
+      "portMappings": [{ "containerPort": 80, "protocol": "tcp" }],
+      "healthCheck": {
+        "command": ["CMD-SHELL", "wget -qO- http://localhost/health || exit 1"],
+        "interval": 30,
+        "timeout": 5,
+        "retries": 3,
+        "startPeriod": 10
+      },
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "/ecs/refcard05-frontend",
+          "awslogs-region": "us-east-1",
+          "awslogs-stream-prefix": "ecs",
+          "awslogs-create-group": "true"
+        }
+      }
+    }
+  ]
+}
