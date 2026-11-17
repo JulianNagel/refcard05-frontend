@@ -4,6 +4,8 @@ Frontend der RefCard05 Full-Stack-Anwendung auf AWS: React + Vite, ausgeliefert 
 
 Backend-Repo: [refcard05-backend](../../../refcard05-backend) – dort liegen auch Docker Compose für die lokale Entwicklung und die Doku zu RDS/S3.
 
+> **Mitwirkende:** Offene Punkte stehen in [TODO.md](TODO.md).
+
 > **Template:** Der React-Code (Vorgabe: [refcard-03-fe-react-vite v1-start](https://github.com/bbwlc/refcard-03-fe-react-vite/tree/v1-start)) wird noch hinzugefügt. Solange kein `package.json` existiert, überspringt die Pipeline Build und Deploy.
 
 ## Struktur
