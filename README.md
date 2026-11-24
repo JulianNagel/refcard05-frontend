@@ -1,5 +1,8 @@
 # React + Vite
 
+> **RefCard05 (Fullstack auf AWS):** Dokumentation für Frontend + Backend → [docs/RefCard05.md im Backend-Repo](https://github.com/JulianNagel/refcard05-backend/blob/main/docs/RefCard05.md)
+> · Backend-Repo: https://github.com/JulianNagel/refcard05-backend
+
 ## Getting the starting point
 
 **Option A — fresh clone at the starting point**
